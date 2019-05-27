@@ -1,0 +1,53 @@
+/* Main styles */
+/*@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap");*/
+.lt {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 60 250;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 10s infinite linear;
+  animation: stroke 10s infinite linear;
+}
+.lt:nth-child(5n + 1) {
+  stroke: #FFFFFF;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+.lt:nth-child(5n + 2) {
+  stroke: #FFFFFF;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+.lt:nth-child(5n + 3) {
+  stroke: #FFFFFF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+.lt:nth-child(5n + 4) {
+  stroke: #FFFFFF;
+  -webkit-animation-delay: -8s;
+  animation-delay: -8s;
+}
+.lt:nth-child(5n + 5) {
+  stroke: #FFFFFF;
+  -webkit-animation-delay: -10s;
+  animation-delay: -10s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -310;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -310;
+  }
+}
+#pre-loader svg {
+  font: 5em/1 'monteserrat', Sans-Serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
