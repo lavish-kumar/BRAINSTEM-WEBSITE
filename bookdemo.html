@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="BrainStem Technology Website" />
+		<meta name="keywords" content="Brainstem Technology Website" />
 		<meta name="description" content="Brainstem Technologies Portfolio" />
 		<meta name="author" content="Brainstem Technology" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<style>
-           
+            
             /* Scrollbar Styling */
             ::-webkit-scrollbar {
                 width: 10px;
@@ -107,7 +107,7 @@
 		<!-- skin -->
 		<link rel="stylesheet" type="text/css" href="css/skins/skin-blue.css" />
 	</head>
-	<body class="bg-overlay-black-30 gradbg " style=" overflow-x: hidden;">
+	<body class="black-bg" style=" overflow-x: hidden;">
 		<div class="wrapper">
 			<!--=================================
 				preloader -->
@@ -156,7 +156,7 @@
                                                  <!-- drop down multilevel  -->
                                                     <ul class="drop-down-multilevel">
                                                         <li><a href="jove.html">Jove</a></li>
-                                                        <li><a href="javascript:void(0)">Jove.AI</a></li>
+                                                        <li><a href="joveai.html">Jove.AI</a></li>
                                                         <li><a href="edugrade.html">Edugrade</a></li>
                                                     </ul>   
                                                 </li>
@@ -180,7 +180,7 @@
 												<li><a href="research.html">Research</a></li>
 												<li><a href="aboutus.html">About Us</a></li>
 												<li><a href="press.html"> Press </a></li>
-												<li><a href="bookdemo.html"> Book a Demo</a></li>
+												<li><a href="javascript:void(0)"> Book a Demo</a></li>
 											</ul>
 										</div>
 									</div>
@@ -199,244 +199,117 @@
 
 <!--=================================
 page-title-->
-
-<section id="jovebg" class="page-title center parallax " data-jarallax='{"speed": 0.6}' >
-     <img class="slideInUp wow" src="images/jove.png" height="200px" alt="jove logo" >
-  <div class="container slideInUp wow">
-    <div class="row"> 
-      <div class="col-lg-12"> 
-      <div class="page-title-name">
-         
-          <h1 class="text-white">JOVE . AI</h1>
-          <p class="text-white">Discover, engage and hire talent faster</p>
-     </div>
-     </div>
-      </div></div>
-</section>
-
 <!--=================================
 page-title -->
 
 
 <!--=================================
  services-->
+<!--=================================
+ login-->
 
-<section class="page-section-pt" style="background-color: transparent">
+<section class=" bg-overlay-black-40 section-transparent page-section-pb gradbg">
   <div class="container">
-     <div class="row">
-      <div class="col-lg-6 ">
-         <div class="js-video [youtube, widescreen]">
-           <iframe src="https://www.youtube.com/embed/nrJtHemSPW4?rel=0" allowfullscreen></iframe>
+     <div class="row justify-content-center">
+       <div class="col-md-8">
+         <div class="logo text-center mb-30 mt-30">
+           <a href="index.html"><img style="height: 200px;
+margin: 30px 0;
+position: relative;margin-top: 100px" id="logo_img" src="images/bsfulllogo%20white.png" alt="logo"> </a>
+         </div>
+        <div class="register-bg clearfix" style="border-radius: 10px 10px 10px 10px;">
+           <div class="register-title" style="border-radius: 10px 10px 0px 0px;"> 
+             <h4 class="text-white mb-0">BOOK A DEMO TODAY !</h4>
+            </div>
+            <form>
+        <div id="register-form" class="register-form">
+           <div class="row">
+           <div class="section-field col-md-6">
+             <label>First Name *</label>
+              <div class="field-widget">
+                <input type="text" class="form-control" placeholder="Your Name" name="firstname" required>
+              </div>  
+            </div> 
+            <div class="section-field col-md-6">
+             <label>Last Name *</label>
+             <div class="field-widget">
+              <input type="text" class="form-control" placeholder="Last Name" name="lastname" required>
+              </div>
+             </div>
+            </div>
+            <div class="section-field">
+             <label>Email *</label>
+              <div class="field-widget">
+               <input  class="email form-control" type="email" placeholder="Enter your email" name="email" required>
+              </div> 
+            </div>
+            <div class="section-field">
+             <label>Mobile phone *</label>
+              <div class="field-widget">
+               <input id="phone" class="phone form-control" type="text" placeholder="Enter your mobile no" name="phone" required>
+              </div> 
+            </div>
+            <div class="section-field">
+                  <label>Demo of *</label>
+                  <div class="box">
+                     <select id="demotype" name="source" class="Wide fancyselect" style="display: none;" required>
+                      <option value="product">Products</option>
+                      <option value="stateoftheartservice">State of the art services</option>
+                      <option value="developmentservice">Development services</option>
+                      <option value="researchservice">Research Services</option>
+                    </select>
+                      <div class="nice-select Wide fancyselect" tabindex="0">
+                          <span class="current">which services/products ?</span>
+                          <ul class="list">
+                              <li data-value="product" class="option selected focus">Products</li>
+                              <li data-value="stateoftheartservice" class="option">State of the art services</li>
+                              <li data-value="developmentservice" class="option">Development services</li>
+                              <li data-value="researchservice" class="option">Research Services</li>
+                          </ul>
+                      </div>
+                 </div>
+            </div>
+            
+            <div class="section-field">
+                  <label>Select Specific Service *</label>
+                  <div class="box">
+                     <select name="source" class="Wide fancyselect" style="display: none;" required>
+                      <option value="product">Products</option>
+                      <option value="stateoftheartservice">State of the art services</option>
+                      <option value="developmentservice">Development services</option>
+                      <option value="researchservice">Research Services</option>
+                    </select>
+                      <div class="nice-select Wide fancyselect" tabindex="0">
+                          <span class="current">which services/products ?</span>
+                          <ul id="specificservice" class="list">
+                              <li data-value="" class="option selected focus">-----Select a demo type first-----</li>
+                             
+                          </ul>
+                      </div>
+                 </div>
+
+            </div>
+                
+                <button class="button" onclick="submit">BOOK NOW <i class="fa fa-check"></i></button>
+              
+            
+             </div>
+                </form>
+           </div>
         </div>
       </div>
-      <div class="col-lg-6 sm-mt-30 slideInRight wow align-self-center  ">
-        <div class="section-title mb-20">
-            <h2 class="text-white">What is JOVE.AI?</h2>
-            <p class="text-white">Jove is an intelligent hiring platform powered by machine learning and data science providing recruiters with insights to discover, engage and hire candidates better.</p>
-          </div>
-
-      </div>  
-     </div>
   </div>
 </section>
 
 <!--=================================
- services-->
-
- <!--=================================
- sections -->
-
-<section class="page-section-pt service-04" style="background-color: transparent">
-  <div class="container" >
-    <div class="row">
-              <div class="col-lg-6 col-md-6 slideInUp wow  ">
-
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">ATS Features</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list list-arrow">
-                <li>Requisition Creation</li>
-                <li>Requisition Approval</li>
-                <li>Job Posting and Career Pages</li>
-                <li>Candidate Stage movement</li>
-                <li>Interview Scheduling and Feedback Collection</li>
-                <li>Offer Management</li>
-                <li>Analytics</li>
-                </ul>
-
-            </div>
-          </div>
-      
-      </div>
-              <div class="col-lg-6 col-md-6 slideInUp wow  ">
-
-
-          <div class="card">
-            <div class="card-header">
-              <h5 class="card-title">Machine Learning &amp; AI</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list list-arrow">
-                    <li>Automated Screening and Stackranking</li>
-                    <li>Candidate Recommendation Engine (AI Sourcing)</li>
-                    <li>Chat Bots (Voice and Text) for Candidate engagement</li>
-                </ul>
-
-            </div>
-          </div>
-      
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!--=================================
- service -->
-
-
-            
-
-<!------------------IMAGE SLIDER ---------------------->
-            
-			<section class="page-section-pt footer " data-jarallax='{"speed": 0.6}' style="padding-bottom:80px;background-color: transparent
-				">
-				<div class="container " style="margin-bottom: 30px">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							<div class="section-title text-center" style="margin-top: 20px">
-								<h2 class="title-effect text-white">Jove Overview</h2>
-							</div>
-						</div>
-					</div>
-					<div class="item-bg"></div>
-					<div class="news-slider" id="slider2">
-						<div class="news-slider__wrp swiper-wrapper">
-							<div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(1).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-							<div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-								<div class="news__img">
-                                <img src="images/joveai/image%20(2).webp" alt="news">
-                                </div>
-								</div>
-							</div>
-							<div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img">
-                                    <img src="images/joveai/image%20(3).webp" alt="news">
-                                    </div>
-								</div>
-							</div>
-							<div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(4).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-                            <div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(5).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-                            <div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(6).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-                            <div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(7).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-                            <div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(8).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-                            <div class="news-slider__item swiper-slide">
-								<div href="" class="news__item">
-									<div class="news__img" style="text-align: center">
-										<div class="news__img">
-                                        <img src="images/joveai/image%20(9).webp" alt="news">
-                                        </div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="news-slider__ctr">
-							<div class="news-slider__arrows">
-								<button class="news-slider__arrow news-slider-prev">
-									<span class="icon-font">
-										<svg class="icon icon-arrow-left">
-											<use xlink:href="#icon-arrow-left"></use>
-										</svg>
-									</span>
-								</button>
-								<button class="news-slider__arrow news-slider-next">
-									<span class="icon-font">
-										<svg class="icon icon-arrow-right">
-											<use xlink:href="#icon-arrow-right"></use>
-										</svg>
-									</span>
-								</button>
-							</div>
-							<div class="news-slider__pagination"></div>
-						</div>
-					</div>
-					<svg hidden="hidden">
-						<defs>
-							<symbol id="icon-arrow-left" viewBox="0 0 32 32">
-								<title>arrow-left</title>
-								<path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
-							</symbol>
-							<symbol id="icon-arrow-right" viewBox="0 0 32 32">
-								<title>arrow-right</title>
-								<path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
-							</symbol>
-						</defs>
-					</svg>
-				</div>
-			</section>
-            
-<!--=================================
-action box- -->
-<!------------------ READY TO AUTOMATE SLOGAN ---------------------->
+ login
             
 			<section class="action-box page-section-ptb bg-overlay-black-10" style="padding: 20px; background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);">
 				<div class="container slideInUp wow">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							 <div class="action-box-text">
-         <h3 class="text-white"><strong>JOVE </strong> Sounds Intresting, book a demo today for more exploration !</h3>
+         <h3 class="text-white"><strong>JOVE.IN </strong> Sounds Intresting, book a demo today for more exploration !</h3>
 
       </div>
       <div class="action-box-button">
@@ -451,7 +324,7 @@ action box- -->
 			</section>
 
  
-<!--=================================
+=================================
 action box- -->
 
  
@@ -479,8 +352,8 @@ action box- -->
 						<div class="col-xs-6 col-sm-3">
                             <h6 class="text-white mb-30 mt-10 text-uppercase">Reach Us</h6>
 							<p class="mt-20">Please write us on the below:<br>
-                                info@brainstemindia.com<br>
-                                or call us at<br>9950655755, 9930444955</p>
+                                Bussiness@brainstemindia.com<br>
+                                or call us at<br>9930444955</p>
 						</div>
                         <div class="my-3 col-sm-6">
                             <h6 class="text-white mb-30 mt-10 text-uppercase">Our Partners</h6>
@@ -517,7 +390,7 @@ action box- -->
 				</div>
 			</footer>
             
-            
+           
 		</div>
         
 		<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
@@ -529,29 +402,72 @@ action box- -->
 		<!-- plugins-jquery -->
 		<script src="js/plugins-jquery.js"></script>
 		<script src="./vendor/three.r92.min.js"></script>
-        <script src="./dist/vanta.dots.min.js"></script>
+        <script src="./dist/vanta.net.min.js"></script>
 
 		<script>
-        VANTA.DOTS({
-          el: "#jovebg",
-          color: 0x8fdce5,
-          color2: 0x97e5,
-          backgroundColor: 0x0,
-          size: 1.80,
-          spacing: 44.00
-        })
+     
+                $(document).ready(function() {
+
+                  $('#demotype').change(function() {
+
+                    var el = $(this) ;
+                      
+                    if(el.val() === "product" ) {
+                    var arrayList = [
+                    ["JOVE","jove"], 
+                    ["JOVE.AI","joveai"],
+                    ["EDUGRADE","edugrade"]
+                    ];  
+                        $('#specificservice').find('li').remove();
+                        for (var i = 0; i <3; i++) {                    
+                        $('#specificservice').append('<li data-value="' + arrayList[i][1] + '" class="option ">' + arrayList[i][0] + '</li>');
+                        }
+                    }
+                      
+                    else if(el.val() === "stateoftheartservice" ) {
+                        var arrayList = [
+                    ["Adding chatbot & AI to your business", "ACATB"], 
+                    ["Market research & Data Analysis", "MRDA"],
+                    ["Enterprise (Complete) Robotic Process Automation", "ECRPA"],
+                    ["Voice Assistant for your business", "VAYB"]
+                    ];
+                        $('#specificservice').find('li').remove();
+                        for (var i = 0; i <4; i++) {                    
+                        $('#specificservice').append('<li data-value="' + arrayList[i][1] + '" class="option ">' + arrayList[i][0] + '</li>');
+                        }
+                    }
+                      
+                    else if(el.val() === "developmentservice" ) {
+                        var arrayList = [
+                    ["Cloud based software development", "CBSD"], 
+                    ["Website Development ", "WD"],
+                    ["ERP Development", "ERPD"]
+                    ];
+                        $('#specificservice').find('li').remove();
+                        for (var i = 0; i <3; i++) {                    
+                        $('#specificservice').append('<li data-value="' + arrayList[i][1] + '" class="option ">' + arrayList[i][0] + '</li>');
+                        }
+                    }
+                      
+                    else if(el.val() === "researchservice" ) {
+                        var arrayList = [
+                    ["Behavioural Science ", "BS"], 
+                    ["Cognitive Neuroscience ", "CN"],
+                    ["Big Data", "BD"]
+                    ];
+                        $('#specificservice').find('li').remove();
+                        for (var i = 0; i <3; i++) {                    
+                        $('#specificservice').append('<li data-value="' + arrayList[i][1] + '" class="option ">' + arrayList[i][0] + '</li>');
+                        }
+
+                    }
+
+                  });
+
+                });
+          
         </script>
-        <script>
-//            $(document).ready(function(){
-//            $(window).resize(function(){
-//            VANTA.TOPOLOGY({
-//			  el: "#rev_slider_269_1_wrapper",
-//			  color: 0x16a8c5,
-//			  backgroundColor: 0x3b1b3b
-//			});
-//            });
-//            });
-        </script>
+
         
 		<!-- plugin_path -->
         <script>var plugin_path = 'js/';</script>
@@ -564,5 +480,3 @@ action box- -->
 	
     </body>
 </html>
-
-
