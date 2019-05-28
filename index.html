@@ -8,6 +8,29 @@
 		<meta name="author" content="Brainstem Technology" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<style>
+            /* Scrollbar Styling */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background : black;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background: #ffffff; 
+            }
+            ::-webkit-scrollbar-thumb:hover {
+            background: #30cfd0;}
+            
+            html {
+                position: relative;
+                overflow-x: hidden !important;
+            }
 			.loaderdiv {
 			height: 100%;
 			background-size: .2em 100%;
@@ -33,6 +56,27 @@
 			50%{background-position:100% 49%}
 			100%{background-position:0% 52%}
 			}
+     
+			.gradbg{background: linear-gradient(117deg, #2ab1c2, #b62ac2, #de032d);
+			background-size: 100% 200%;
+			-webkit-animation: AnimationName 16s ease infinite;
+			-moz-animation: AnimationName 16s ease infinite;
+			animation: AnimationName 16s ease infinite;
+			}
+			@-webkit-keyframes AnimationName {
+			0%{background-position:24% 0%}
+			50%{background-position:77% 100%}
+			100%{background-position:24% 0%}
+			}
+			@-moz-keyframes AnimationName {
+			0%{background-position:24% 0%}
+			50%{background-position:77% 100%}
+			100%{background-position:24% 0%}
+			}
+			@keyframes AnimationName { 
+			0%{background-position:24% 0%}
+			50%{background-position:77% 100%}
+			100%{background-position:24% 0%}} 
 		</style>
 		<title>Brainstem Technologies</title>
 		<!-- Favicon -->
@@ -54,34 +98,10 @@
 		<link rel="stylesheet" type="text/css" href="css/responsive.css" />
 		<!-- Preloader -->
 		<link rel="stylesheet" type="text/css" href="css/loader.css" />
-		<style>
-			.gradbg{background: linear-gradient(117deg, #2ab1c2, #b62ac2, #de032d);
-			background-size: 100% 200%;
-			-webkit-animation: AnimationName 16s ease infinite;
-			-moz-animation: AnimationName 16s ease infinite;
-			animation: AnimationName 16s ease infinite;
-			}
-			@-webkit-keyframes AnimationName {
-			0%{background-position:24% 0%}
-			50%{background-position:77% 100%}
-			100%{background-position:24% 0%}
-			}
-			@-moz-keyframes AnimationName {
-			0%{background-position:24% 0%}
-			50%{background-position:77% 100%}
-			100%{background-position:24% 0%}
-			}
-			@keyframes AnimationName { 
-			0%{background-position:24% 0%}
-			50%{background-position:77% 100%}
-			100%{background-position:24% 0%}}    
-		</style>
 		<!-- Swiper -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 		<link rel="stylesheet" href="css/cards.css">
-		<!-- Processflow -->    
-		<link rel="stylesheet" href="css/processflow.css">
 		<!-- skin -->
 		<link rel="stylesheet" type="text/css" href="css/skins/skin-blue.css" />
 	</head>
@@ -108,7 +128,7 @@
 			<!------------------HEADER ---------------------->
             
             
-			<header id="header" class="header transparent fullWidth">
+			<header id="header" class="header transparent fullWidth" style="font-weight: 400px">
 				<div class="menu">
 					<!-- menu start -->
 					<nav id="menu" class="mega-menu">
@@ -128,12 +148,35 @@
 										<div class="menu-bar">
 											<ul class="menu-links">
 												<li><a href="javascript:void(0)">Home</a></li>
-												<li><a href="javascript:void(0)"> Products <i class="fa fa-angle-down fa-indicator"></i></a></li>
-												<li><a href="javascript:void(0)">Services <i class="fa fa-angle-down fa-indicator"></i></a></li>
-												<li><a href="javascript:void(0)">Research <i class="fa fa-angle-down fa-indicator"></i></a></li>
-												<li><a href="javascript:void(0)">About Us<i class="fa fa-angle-down fa-indicator"></i></a></li>
-												<li><a href="javascript:void(0)"> Press <i class="fa fa-angle-down fa-indicator"></i></a></li>
-												<li><a href="javascript:void(0)"> Book a Demo <i class="fa fa-angle-down fa-indicator"></i></a></li>
+												<li><a href="javascript:void(0)"> Products <i class="fa fa-angle-down fa-indicator"></i></a>
+                                                 <!-- drop down multilevel  -->
+                                                    <ul class="drop-down-multilevel">
+                                                        <li><a href="jove.html">Jove</a></li>
+                                                        <li><a href="joveai.html">Jove.AI</a></li>
+                                                        <li><a href="edugrade.html">Edugrade</a></li>
+                                                    </ul>   
+                                                </li>
+												<li><a href="javascript:void(0)">Services <i class="fa fa-angle-down fa-indicator"></i></a>
+                                                 <!-- drop down multilevel  -->
+                                                    <ul class="drop-down-multilevel">
+                                                        <li><a href="javascript:void(0)">State of the art <br>services<i class="ti-plus fa-indicator"></i></a>
+                                                         <ul class="drop-down-multilevel">
+                                                             <li><a href="addchatbot.html">Adding chatbot &amp; AI to your business</a></li>
+                                                             <li><a href="marketresearch.html">Market research &amp; Data Analysis</a></li>
+                                                             <li><a href="enterpriserobotics.html">Enterprise Robotic Process Automation</a></li>
+                                                             <li><a href="voiceassistant.html">Voice Assistant for your business</a></li>
+                                                         </ul>
+                                                        </li>
+                                                        <li><a href="devservices.html">Development Services</a>
+                                                        </li>
+                                                        <li><a href="researchservices.html">Research Services</a>
+                                                        </li>
+                                                    </ul>   
+                                                </li>
+												<li><a href="research.html">Research</a></li>
+												<li><a href="aboutus.html">About Us</a></li>
+												<li><a href="press.html"> Press </a></li>
+												<li><a href="bookdemo.html"> Book a Demo</a></li>
 											</ul>
 										</div>
 									</div>
@@ -345,9 +388,9 @@
             
 			<!------------------STATE OF ART SERVICES ---------------------->
             
-			<section class="page-section-pt footer  " data-jarallax='{"speed": 0.6}' style="padding-bottom:80px;background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+			<section class="page-section-pt footer " data-jarallax='{"speed": 0.6}' style="padding-bottom:80px;background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 				">
-				<div class="container" style="margin-bottom: 30px">
+				<div class="container " style="margin-bottom: 30px">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="section-title text-center" style="margin-top: 20px">
@@ -456,7 +499,7 @@
             
 			<!------------------ READY TO AUTOMATE SLOGAN ---------------------->
             
-			<section class="page-section-ptb bg-overlay-black-10" style="padding: 20px; background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);">
+			<section class="page-section-ptb bg-overlay-black-10 " style="padding: 20px; background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
@@ -471,9 +514,9 @@
             
 			<!------------------ WHAT WE DO ---------------------->
             
-			<section class="page-section-pt footer " data-jarallax='{"speed": 0.6}' style="padding-bottom:80px;  background: linear-gradient(to right, #ad5389, #3c1053);
+			<section class="page-section-pt " data-jarallax='{"speed": 0.6}' style="padding-bottom:80px;  background: linear-gradient(to right, #ad5389, #3c1053);
 				">
-				<div class="container " style="margin-bottom: 30px">
+				<div class="container footer " style="margin-bottom: 30px">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="section-title text-center" style="margin-top: 20px">
@@ -486,7 +529,7 @@
 					<div class="news-slider" id="slider1">
 						<div class="news-slider__wrp swiper-wrapper">
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										Domain Expertise
 									</div>
@@ -495,10 +538,10 @@
 											<span class="ti-user" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										On-Time Project completion
 									</div>
@@ -507,10 +550,10 @@
 											<span class="ti-timer" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										Clean and professional codes
 									</div>
@@ -519,10 +562,10 @@
 											<span class="ti-align-left" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										Safe &amp; secured data
 									</div>
@@ -531,10 +574,10 @@
 											<span class="ti-zip" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										3<sup>rd</sup> party quality audit
 									</div>
@@ -543,10 +586,10 @@
 											<span class="ti-desktop" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news__title">
 										1 Year Free AMC<sup>*</sup>
 									</div>
@@ -555,7 +598,7 @@
 											<span class="ti-panel" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 						<div class="news-slider__ctr">
@@ -660,7 +703,7 @@
 					<div class="news-slider2" id="slider2">
 						<div class="news-slider__wrp swiper-wrapper">
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">01</span>
@@ -673,10 +716,10 @@
 											<span class="ti-widget" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">02</span>
@@ -689,10 +732,10 @@
 											<span class="ti-search" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">03</span>
@@ -705,10 +748,10 @@
 											<span class="ti-view-list-alt" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">04</span>
@@ -722,10 +765,10 @@
 											<span class="ti-shift-left-alt" style="font-size: 90px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">05</span>
@@ -740,10 +783,10 @@
 											<span class="ti-desktop" style="font-size: 90px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">06</span>
@@ -758,10 +801,10 @@
 											<span class="ti-harddrives" style="font-size: 80px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">07</span>
@@ -774,10 +817,10 @@
 											<span class="ti-stats-up" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">08</span>
@@ -790,10 +833,10 @@
 											<span class="ti-server" style="font-size: 130px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">09</span>
@@ -808,10 +851,10 @@
 											<span class="ti-briefcase" style="font-size: 80px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 							<div class="news-slider__item swiper-slide">
-								<a href="" class="news__item">
+								<div href="" class="news__item">
 									<div class="news-date">
 										<span class="news-date__title">Step</span>
 										<span class="news-date__txt">10</span>
@@ -825,7 +868,7 @@
 											<span class="ti-ruler-pencil" style="font-size: 90px;" aria-hidden="true"></span>
 										</div>
 									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 						<div class="news-slider__ctr">
@@ -967,7 +1010,7 @@
             
 		</div>
         
-		
+		<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
 		
         <!------------------ SCRIPTS---------------------->
         
@@ -975,11 +1018,6 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<!-- plugins-jquery -->
 		<script src="js/plugins-jquery.js"></script>
-
-		<!-- plugin_path -->
-        <script>var plugin_path = 'js/';</script>
-        
-
         <script src="./vendor/p5.min.js"></script>
 		<script src="./vendor/three.r92.min.js"></script>
 		<script src="./dist/vanta.topology.min.js"></script>
@@ -1002,7 +1040,9 @@
 //            });
         </script>
         
-
+		<!-- plugin_path -->
+        <script>var plugin_path = 'js/';</script>
+        
 		<!-- REVOLUTION JS FILES -->
 		<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
 		<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
