@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="Brainstem Technology Website" />
+		<meta name="keywords" content="Brainswhawhtem Technology Website" />
 		<meta name="description" content="Brainstem Technologies Portfolio" />
 		<meta name="author" content="Brainstem Technology" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -500,6 +500,13 @@ action box- -->
         <script src="./dist/vanta.waves.min.js"></script>
 
 		<script>
+            if (window.matchMedia("(max-width: 767px)").matches)  
+        { 
+            // The viewport is less than 768 pixels wide 
+            $('#jovebg').css("background","linear-gradient(to top, #ad5389, #3c1053)");
+        } else { 
+            
+            // The viewport is at least 768 pixels wide 
         VANTA.WAVES({
           el: "#jovebg",
           color: 0x2c0452,
@@ -508,6 +515,8 @@ action box- -->
           waveSpeed: 1.75,
           zoom: 1.30
         })
+        } 
+        
         </script>
         <script>
 //            $(document).ready(function(){
