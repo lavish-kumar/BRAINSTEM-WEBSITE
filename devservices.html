@@ -500,6 +500,12 @@ action box- -->
         <script src="./dist/vanta.waves.min.js"></script>
 
 		<script>
+			 if (window.matchMedia("(max-width: 767px)").matches)  
+        { 
+            // The viewport is less than 768 pixels wide 
+            $('#jovebg').css("background","linear-gradient(to top, #ad5389, #3c1053)");
+        } else { 
+            
         VANTA.WAVES({
           el: "#jovebg",
           //color: 0x590404,0e0133
@@ -508,7 +514,7 @@ action box- -->
           waveHeight: 4.00,
           waveSpeed: 1.75,
           zoom: 1.30
-        })
+        })}
         </script>
         <script>
 //            $(document).ready(function(){
