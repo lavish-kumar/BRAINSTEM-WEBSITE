@@ -500,7 +500,14 @@ action box- -->
         <script src="./dist/vanta.waves.min.js"></script>
 
 		<script>
-        VANTA.WAVES({
+            if (window.matchMedia("(max-width: 767px)").matches)  
+        { 
+            // The viewport is less than 768 pixels wide 
+            $('#jovebg').css("background","linear-gradient(to top, #ad5389, #3c1053)");
+        } else { 
+            
+            // The viewport is at least 768 pixels wide 
+			VANTA.WAVES({
           el: "#jovebg",
           color: 0x2c0452,
           shininess: 14.00,
@@ -508,8 +515,9 @@ action box- -->
           waveSpeed: 1.75,
           zoom: 1.30
         })
-        </script>
-        <script>
+        } 
+
+
 //            $(document).ready(function(){
 //            $(window).resize(function(){
 //            VANTA.TOPOLOGY({
