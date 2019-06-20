@@ -36,7 +36,7 @@ var swiper = new Swiper('.news-slider', {
     spaceBetween: 0,
     slidesPerView: 'auto',
     speed: 300,
-    mousewheel: true,
+    mousewheel: false,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -96,7 +96,7 @@ var swiper2 = new Swiper('.news-slider2', {
     spaceBetween: 0,
     slidesPerView: 'auto',
     speed: 300,
-    mousewheel: true,
+    mousewheel: false,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -156,7 +156,7 @@ var swiper3 = new Swiper('.news-slider3', {
     spaceBetween: 0,
     slidesPerView: 'auto',
     speed: 300,
-    mousewheel: true,
+    mousewheel: false,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
