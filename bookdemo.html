@@ -126,7 +126,10 @@
 				</svg>
 			</div>
 		
-            
+
+
+			
+
 			<!------------------HEADER ---------------------->
             
             
@@ -144,14 +147,12 @@
 											<li>
 												<a href="index.html"><img 
 													src="images/long%20white%20logo.png" alt="logo"></a>
-                                                
 											</li>
-                                         
 										</ul>
 										<!-- menu links -->
 										<div class="menu-bar">
 											<ul class="menu-links">
-												<li><a href="index.html">Home</a></li>
+												<li><a href="javascript:void(0)">Home</a></li>
 												<li><a href="javascript:void(0)"> Products <i class="fa fa-angle-down fa-indicator"></i></a>
                                                  <!-- drop down multilevel  -->
                                                     <ul class="drop-down-multilevel">
@@ -180,7 +181,7 @@
 												<li><a href="research.html">Research</a></li>
 												<li><a href="aboutus.html">About Us</a></li>
 												<li><a href="press.html"> Press </a></li>
-												<li><a href="javascript:void(0)"> Book a Demo</a></li>
+												<li><a href="bookdemo.html"> Book a Demo</a></li>
 											</ul>
 										</div>
 									</div>
@@ -197,10 +198,31 @@
  header -->
 
 
-<!--=================================
-page-title-->
-<!--=================================
-page-title -->
+			<!------------------ SUCCESS MODAL ---------------------->
+			<div class="modal fade" id="successmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+							<div class="modal-content">
+									<div class="modal-header">
+									  <div class="modal-title register-title" id="exampleModalLongTitle"><div class="section-title mb-10">
+										<h6>ACKNOWLEDGEMENT</h6>
+										<h2>Dear <span id="DemoBooker"></span>,</h2>
+										<p>Thank you for showing intrest in us, We at brainstem value our customers the most. A email verification has been sent at <strong id="DemoBookeremail"></strong> you have Succesfully booked a demo for our <Strong id="BookedService"></Strong> Service/Product, We will soon contact you via email for further proceedings.</p>
+									  </div>
+									  </div>
+									  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">×</span>
+									  </button>
+									</div>
+									
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+					<div class="modal-content">
+
+					</div>
+					</div>
+				</div>
 
 
 <!--=================================
@@ -221,7 +243,7 @@ position: relative;margin-top: 100px" id="logo_img" src="images/bsfulllogo%20whi
            <div class="register-title" style="border-radius: 10px 10px 0px 0px;"> 
              <h4 class="text-white mb-0">BOOK A DEMO TODAY !</h4>
             </div>
-            <form>
+            <form id="Demobook">
         <div id="register-form" class="register-form">
            <div class="row">
            <div class="section-field col-md-6">
@@ -246,20 +268,20 @@ position: relative;margin-top: 100px" id="logo_img" src="images/bsfulllogo%20whi
             <div class="section-field">
              <label>Mobile phone *</label>
               <div class="field-widget">
-               <input id="phone" class="phone form-control" type="text" placeholder="Enter your mobile no" name="phone" required>
+               <input  class="form-control" type="text" placeholder="(Country Code) - Number" name="phone" required>
               </div> 
             </div>
             <div class="section-field">
                   <label>Demo of *</label>
                   <div class="box">
-                     <select id="demotype" name="source" class="Wide fancyselect" style="display: none;" required>
+                     <select id="demotype" name="demo" class="Wide fancyselect" style="display: none;" >
                       <option value="product">Products</option>
                       <option value="stateoftheartservice">State of the art services</option>
                       <option value="developmentservice">Development services</option>
                       <option value="researchservice">Research Services</option>
                     </select>
                       <div class="nice-select Wide fancyselect" tabindex="0">
-                          <span class="current">which services/products ?</span>
+                          <span id="demo" class="current">which services/products ?</span>
                           <ul class="list">
                               <li data-value="product" class="option selected focus">Products</li>
                               <li data-value="stateoftheartservice" class="option">State of the art services</li>
@@ -273,24 +295,19 @@ position: relative;margin-top: 100px" id="logo_img" src="images/bsfulllogo%20whi
             <div class="section-field">
                   <label>Select Specific Service *</label>
                   <div class="box">
-                     <select name="source" class="Wide fancyselect" style="display: none;" required>
-                      <option value="product">Products</option>
-                      <option value="stateoftheartservice">State of the art services</option>
-                      <option value="developmentservice">Development services</option>
-                      <option value="researchservice">Research Services</option>
-                    </select>
+					 <select  class="Wide fancyselect" name="service" style="display: none;" >			
+					</select>
                       <div class="nice-select Wide fancyselect" tabindex="0">
-                          <span class="current">which services/products ?</span>
+                          <span id="service" class="current">which Specific product ?</span>
                           <ul id="specificservice" class="list">
                               <li data-value="" class="option selected focus">-----Select a demo type first-----</li>
-                             
                           </ul>
                       </div>
                  </div>
 
             </div>
                 
-                <button class="button" onclick="submit">BOOK NOW <i class="fa fa-check"></i></button>
+                <button class="button" id="SubmitQuery" >BOOK NOW <i class="fa fa-check"></i></button>
               
             
              </div>
@@ -403,7 +420,40 @@ action box- -->
 		<script src="js/plugins-jquery.js"></script>
 		<script src="./vendor/three.r92.min.js"></script>
         <script src="./dist/vanta.net.min.js"></script>
+		<script>
 
+		$( "#Demobook" ).submit(function( event ) {
+
+  			event.preventDefault();
+			var form = $('#Demobook'),
+			url = 'https://script.google.com/macros/s/AKfycbxhsUVHydW2bwW0e6gpf5RMRJy3WAgaxc0RejqxYtNcCEOSO6g/exec'
+		console.log(form);
+
+		var jqxhr = $.ajax({
+			url: url,
+			method: "GET",
+			dataType: "json",
+			data: {
+				"firstname" : $('input[name="firstname"]').val(),
+				"lastname" : $('input[name="lastname"]').val(),
+				"email" : $('input[name="email"]').val(),
+				"phone" : $('input[name="phone"]').val(),
+				"demo" : $('#demo').text(),
+				"service" : $('#service').text(),
+
+			}
+		}).success(
+			$('#DemoBooker').text($('input[name="firstname"]').val()+" "+$('input[name="lastname"]').val()),
+			$('#DemoBookeremail').text($('input[name="email"]').val()),
+			$('#BookedService').text($('#service').text()),
+			$('#successmodal').modal('show'),
+			$('#Demobook').Trigger("reset")
+		);
+		console.log(jqxhr)
+		});
+
+
+		</script>
 		<script>
      
                 $(document).ready(function() {
