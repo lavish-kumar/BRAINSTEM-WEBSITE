@@ -6,25 +6,7 @@ function cLog(content) {
     console.log(content)
 }
 
-if($(window).width() > 800) {
-    $(document).on("mouseover", ".news__item", function (_event, _element) {
 
-        var newsItem = document.querySelectorAll('.news__item');
-        newsItem.forEach(function (element, index) {
-            element.addEventListener('mouseover', function () {
-             
-                // $('.news__item').removeClass('active');
-            });
-
-            element.addEventListener('mouseleave', function () {
-             
-              
-            });
-
-        });
-
-    });
-}
 
 
 var swiper = new Swiper('.news-slider', {
