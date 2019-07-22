@@ -426,8 +426,9 @@ action box- -->
 
   			event.preventDefault();
 			var form = $('#Demobook'),
-			url = 'https://script.google.com/macros/s/AKfycbxhsUVHydW2bwW0e6gpf5RMRJy3WAgaxc0RejqxYtNcCEOSO6g/exec'
-		console.log(form);
+			//url="https://script.google.com/macros/s/AKfycbx-HkB32RBadYK-_Q5Yjryh1HFccqLBQe0WDIaLT_RuK8p5nQQe/exec";
+			url = 'https://script.google.com/macros/s/AKfycbx-HkB32RBadYK-_Q5Yjryh1HFccqLBQe0WDIaLT_RuK8p5nQQe/exec'
+	//	console.log(form);
 
 		var jqxhr = $.ajax({
 			url: url,
@@ -440,7 +441,7 @@ action box- -->
 				"phone" : $('input[name="phone"]').val(),
 				"demo" : $('#demo').text(),
 				"service" : $('#service').text(),
-
+				"uid":"#4d#43446"
 			}
 		}).success(
 			$('#DemoBooker').text($('input[name="firstname"]').val()+" "+$('input[name="lastname"]').val()),
@@ -449,7 +450,7 @@ action box- -->
 			$('#successmodal').modal('show'),
 			$('#Demobook').Trigger("reset")
 		);
-		console.log(jqxhr)
+
 		});
 
 

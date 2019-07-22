@@ -1,0 +1,69 @@
+<html>
+  <body>
+<form id="test-form">
+  
+    <div>
+      <label>Field 1</label>
+      <input type="text" name="form_field_1" placeholder="Field 1"/>
+    </div>
+  
+    <div>
+      <label>Field 2</label>
+      <input type="text" name="form_field_2" placeholder="Field 2"/>
+    </div>
+    
+    <div>
+      <label>Field 3</label>
+      <input type="text" name="form_field_3" placeholder="Field 3"/>
+    </div>
+    
+    <div>
+      <label>Field 4</label>
+      <input type="text" name="form_field_4" placeholder="Field 4"/>
+    </div>
+  
+    <div>
+      <button type="submit"id="submit-form">Submit</button>
+    </div>
+  
+  </form>
+</body>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <scrip>
+      <script>
+
+
+            var $form = $('form#test-form')
+            url = 'https://script.google.com/macros/s/AKfycbx-HkB32RBadYK-_Q5Yjryh1HFccqLBQe0WDIaLT_RuK8p5nQQe/exec'
+        //	console.log(form);
+      
+        $('#submit-form').on('click', function(e) {
+        e.preventDefault();
+        var jqxhr = $.ajax({
+          url: url,
+          method: "GET",
+          dataType: "json",
+          data : {
+				      "form_field_1" : "dzdc",
+				      "form_field_2" : "sxczxcx",
+				      "form_field_3" :"zxcz",
+				      "form_field_4" : "xczxczxczx",
+
+
+			}
+        }).success(
+          // do something
+        );
+      });
+
+      function setup() {
+    var doc = SpreadsheetApp.getActiveSpreadsheet();
+    SCRIPT_PROP.setProperty("key", doc.getId());
+}
+
+      
+      
+          </script>
+  </scrip>
+  </html>
